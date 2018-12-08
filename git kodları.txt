@@ -1,0 +1,88 @@
+GIT kurulum
+
+git config --global user.name "Buðra Coþkun"      -->kullanýcý adý
+git config --global user.email "bugracoskun1996@gmail.com"    --> maiil adresi
+git init    --> git projesi baþlatma
+How to add codes to GIT ?
+
+1)Open the GIT Bash
+
+2) Go to file directory --> cd desktop/final_project_codes/
+
+3)git status --> shows untracked files and changes to be committed
+
+4)git add nameofthefile --> This commend sends file to staging area (Geçiþ bölgesi)
+
+5)git commit -m "version veya not yazabilirsin" --> files have been attached to git repository (Git deposu)
+
+6) git log --> shows information of files which has been attached.
+
+How to make changes in the codes ?
+
+1) git diff --> shows differences in the code. (working directory ile staging area arasýnda)
+
+1.1)git diff --staged --> staging area ile git repository arasýndaki kod farkýný verir  
+
+2) git add .
+
+3) git commit -m "write something"
+
+deleting of codes
+
+1) git rm nameoffile --> deletes code
+
+2)git commit -m "dosya silindi" --> git deposundan silinir.
+
+Changes of file's name
+
+(el ile deðiþtirme)
+1) dosyanýn adýný deðiþtir.
+2)dosya dizinine git
+3)git status --> adýný deðiþtirilmiþ dosyayý yeni bir dosya gibi gösterir, eski dosya silinmiþ gibi gözükür.
+4)git add . --> geçiþ bölgesine taþýndý
+5)git status --> renamed olduðunu gösterir.
+6)git commit -m "write smt" --> bu komut ile deðiþiklik yapýldý.
+
+(komut ile isim deðiþtirme)
+1) git mv deneme1.txt deneme2.txt (deneme1 dosyasýnýn adý deneme2 olmasýný saðlar.)
+2)git status
+3)git commit -m "wrt smt" --> deðiþiklik kaydedilir.
+
+dosyayý baþka dizine taþýmak
+
+1) git mv deneme2.txt dosyalar/ --> dosyalarý taþýma komutu
+2)git status
+3)git commit -m "wrt smt" --> deðiþiklik kaydedilir.
+
+Deðiþiklikleri geri alma (çalýþma dizini üzerinden) 
+(dosya silindiyse de ayný iþlem yapýlabilir.)
+
+1)Git status --> deðiþiklikleri görebiliriz, hangisini geri almak istiyosak ona göre devam ederiz
+2)git chechout -- filename    (deðiþiklikler geri alýndý.)
+
+Deðiþiklikleri geri alma (Geçiþ bölgesi)
+
+1)git status --> geçiþ bölsegi farkýný gösteriyor.
+2)git reset HEAD filename -->geçiþ bölgesinden geri alýndý fakat çalýþma dizininde hala geri alýnmadý.
+3)git checkout -- filename  (çalýþma dizinide düzeldi.)
+
+Versiyon deðiþtirme
+
+1)git log --> eski versiyonlarý gösterir. Turuncu renkte  yazan numaralara hatch code denir.
+2)git checkout hatchcode -- .       --> hatchcode ilk 7 hanesini yazmak yeterlidir.
+3) 2.satýrda . koyduðumuz zaman bütün dosyalarý v2 ye döndürür, eðer dosya ismi yazarsak sadece o dosya geri gelir.
+
+GITHUB a proje gönderme
+1) proje dizinine git
+2)git remote add githubRepo(takma ad) gitrepositoryadresiniyapýþtýr
+3)git remote    --> baðlantý kontrol edilebilir
+4)git push -u githubRepo master   (u bütün dosyalarý gönderme anlamýna gelir)
+5)kullanýcý adý ve þifre gir. --> proje gönderildi.
+
+.gitignore komutu (git projesinde git tarafýndan takip edilmesini istemediðimiz dosyalarý buraya ekleriz, veritabaný dosyalarý vb.)
+1)git status --> burada dosyayý görebiliriz.
+2)cat >> .gitignore filename -->gitignore dosyasý oluþturulup file bu dosyaya kayýt edildi.
+3)control+C ile dosyadan çýkýþ yaparýz.
+4)git status --> gitignore dosyasý gözükür artýk
+5)git add . ve git commit ile dosya kayýt edilir.
+6)gedit .gitignore --> gitignore dosyasý açýlýr	
