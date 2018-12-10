@@ -86,3 +86,5 @@ GITHUB a proje gönderme
 4)git status --> gitignore dosyasý gözükür artýk
 5)git add . ve git commit ile dosya kayýt edilir.
 6)gedit .gitignore --> gitignore dosyasý açýlýr	
+
+Eline saðlýk Buðra!

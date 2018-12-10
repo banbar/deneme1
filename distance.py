@@ -1,6 +1,8 @@
 # We have to test this!
 # Link to Postgres
 #yorum satırı3
+
+# Buğra what had happened?
 import math
 from math import atan
 from math import atan2
